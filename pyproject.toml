@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ComfyUI_LoadImageWithFileName"
-version = "0.0.2"
+version = "0.0.3"
 description = "Load Image With FileName"
 authors = [
-  {name = "ComfyUI-LoadImageWithFileName", email = "dgr0725@gmail.com"}
+  {name = "ComfyUI_LoadImageWithFileName", email = "dgr0725@gmail.com"}
 ]
 readme = "README.md"
 license = {text = "GNU General Public License v3"}
@@ -37,7 +37,7 @@ Documentation = "https://github.com/HAEGONG/ComfyUI_LoadImageWithFileName/wiki"
 
 [tool.comfy]
 PublisherId = "haegong"
-DisplayName = "ComfyUI-LoadImageWithFileName"
+DisplayName = "ComfyUI_LoadImageWithFileName"
 Icon = ""
 Tags = []
 Repository = "https://github.com/HAEGONG/ComfyUI_LoadImageWithFileName"
