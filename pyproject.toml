@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ComfyUI_LoadImageWithFileName"
-version = "0.0.1"
+version = "0.0.2"
 description = "Load Image With FileName"
 authors = [
   {name = "ComfyUI-LoadImageWithFileName", email = "dgr0725@gmail.com"}

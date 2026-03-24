@@ -21,14 +21,19 @@ class LoadImageWithFileName:
     ESSENTIALS_CATEGORY = "Basics"
     SEARCH_ALIASES = ["load image", "open image", "import image", "image input", "upload image", "read image", "image loader"]
 
-    RETURN_TYPES = ("IMAGE", "MASK", "STRING", "STRING")
-    RETURN_NAMES = ("IMAGE", "MASK", "File Name","Path")
+    RETURN_TYPES = ("IMAGE", "MASK", "STRING", "STRING", "STRING")
+    RETURN_NAMES = ("IMAGE", "MASK", "File Name", "Extension", "Path")
     FUNCTION = "load_image_with_file_name"
 
     def load_image_with_file_name(self, image):
         image_path = folder_paths.get_annotated_filepath(image)
         img = node_helpers.pillow(Image.open, image_path)
-        img_name = os.path.basename(image_path)
+
+        img_base_name = os.path.basename(image_path)
+        img_name, img_ext = os.path.splitext(img_base_name)
+
+        img_ext = img_ext.lstrip(".")
+
         img_path = os.path.dirname(image_path)
 
         output_images = []
@@ -72,7 +77,7 @@ class LoadImageWithFileName:
             output_image = output_images[0]
             output_mask = output_masks[0]
 
-        return (output_image, output_mask, img_name, img_path)
+        return (output_image, output_mask, img_name, img_ext, img_path)
 
     @classmethod
     def IS_CHANGED(s, image):
