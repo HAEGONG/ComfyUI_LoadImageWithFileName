@@ -1,4 +1,4 @@
-# ComfyUI-LoadImageWithFileName
+# ComfyUI_LoadImageWithFileName
 
 Load Image With FileName, Path
 
